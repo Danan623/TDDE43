@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/show_eventcontent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/smoke"
+    tools:context=".ShowContent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/showcontent_cardVTop"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:cardCornerRadius="200dp">
+
+        <ImageView
+            android:id="@+id/show_eventimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/domd" >
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/showcontent_cardVbot"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showcontent_cardVTop"
+        app:cardCornerRadius="200dp">
+
+        <TextView
+            android:id="@+id/show_eventname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/showcontent_cardVbot"
+            android:layout_marginTop="50dp"
+            android:background="#2C03A9F4"
+
+            android:text="Dömd \n January 9 \n time \n 22:00 "
+
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#BF3A9EB7"
+            android:textSize="46sp"
+            android:textStyle="bold|italic" >
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_below="@+id/showcontent_cardVbot">
+
+        <ImageButton
+            android:id="@+id/returnbuttom"
+            android:contextClickable="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/back2" />
+
+        <ImageButton
+            android:id="@+id/facebook_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|left"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/fb" />
+
+        <ImageButton
+            android:id="@+id/instagram_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|left"
+            android:layout_marginLeft="50dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/insta" />
+
+
+
+        <ImageView
+            android:id="@+id/like_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="0dp"
+            android:src="@drawable/like_emoticon"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

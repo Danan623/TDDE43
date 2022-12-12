@@ -1,0 +1,79 @@
+This is a Guide to help you know how to change and add some of my simple logic components
+
+intro :
+So first of all you will need to know the event name. This is the name of you event which you
+set in the init method. The event name will work as a Key for the item where you would like
+to change or add some logic to. The logic will be placed in a set which will be unique to or event.
+
+1.
+You will find where to set change the logic in MainActivity class.
+all the code should be placed in the "setLogicActivity1() method"
+
+ public void setLogicActivity1() {
+
+  your code ...
+
+  }
+2.
+You will pass the arguments to the AdventCalendar class through a instance variable
+called "evenCalendar". the correct syntax will be :
+
+ public void setLogicActivity1() {
+
+    eventCalendar.initLogicHashSet("some argument"); // argument is a string
+    more logic to add ...
+
+  }
+
+3.
+When you are finished with the logic you will need to pass the name of your event.
+this will set your unique logic to your own event.
+
+ public void setLogicActivity1() {
+
+    eventCalendar.initLogicHashSet("some argument"); // argument is a string
+    more logic to add ...
+    eventCalendar.setActivity1Name("eventName"); // takes a string. not key sensitive
+
+  }
+
+4. A LIST OF THE DIFFERENT IMPLEMENTATIONS
+
+"ADD_LISTENER"
+: adds a listener to the arrow button on the main screen. for now it will just rotate the image
+pi radians counterclockwise every time you click on the button.
+
+"TEXT_WHITE"
+: change the text color in main screen to white
+
+"TEXT_BLACK"
+: change the text color in main screen to white
+
+"ADD_ARROW_BTN"
+: "add"" a arrow button to the screen. More correct at the moment would be to say, make the
+button visible to the screen in main screen.
+
+"ADD_RANDOM_EMOJI"
+: this will add a pop up component with reaction emoji to your main screen. At the moment it will
+add the logic to the left most image. just to show that this is possible.
+
+"ADD_LOGIC_EMOJI"
+: this will make it possible to pass the list of logic to the pop up component. at the moment
+it is just possible to set the emoji buttons invisible. So this is just a way to show that this is
+possible to do and more logic can be create for different purposes.
+
+"EMOJI_POSITION(i)"
+: the string i should be changed to a number (string) between 0 to 5. this will add the logic
+to the specific emoji button. you will need to make this call after you add "ADD_LOGIC_EMOJI".
+
+"LOCATION_ARROW_BTN"
+: this will make it possible to change the x and y coordinates for the arrow button in main screen.
+you will then need to set "eventCalendar.setCoordinates(int x,int y);"
+NOTE:
+one problem that occurs with this is that it sets the x-pos and y-pos to "the last init".
+The recycler adapter caches each item view in a holder class, but the argument in setCoordinates
+are not added in the set of logic (which would make it sort of static final)
+, instead it will be a variable which will be override each time it's called. It doesn't matter
+if I pass it with a interface or making an instance to reach methods. it will be the same.
+
+

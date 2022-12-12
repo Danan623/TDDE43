@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="120dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="8dp">
+
+    <ImageView
+        android:id="@+id/parent_image"
+        android:layout_width="match_parent"
+        android:layout_height="198dp"
+        android:src="@drawable/p2"
+        android:scaleType="centerCrop"/>
+
+
+    <TextView
+        android:id="@+id/date_txtBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textAllCaps="true"
+        android:textColor="#2E169C"
+        android:textStyle="bold"
+        android:text="Januari 8"
+        android:layout_marginTop="60dp"/>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_toEndOf="@+id/card_view"
+        app:cardBackgroundColor="@color/black"
+        android:scaleType="centerCrop"
+        app:cardCornerRadius="8dp">
+
+    <ImageView
+        android:id="@+id/children_image"
+        android:layout_width="match_parent"
+        android:layout_height="198dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/julfest"/>
+
+        <ImageView
+            android:id="@+id/next_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rightarrow" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
